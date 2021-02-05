@@ -112,7 +112,7 @@ if (isset($_GET['options'])) {
  
   }
   textarea {
-    width: 80%;
+    width: 90%;
     height: 50%;
     padding: 12px 20px;
     margin: auto auto;
@@ -125,8 +125,7 @@ if (isset($_GET['options'])) {
     left: 50%;
     font-size: 20px;
     color: black !important;
-    /* transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%); */
+   
   }
   input[type=submit] {
     width: 80%;
@@ -143,11 +142,11 @@ if (isset($_GET['options'])) {
   }
     
     .container {
-      margin: 100px auto;
+      margin-right: auto;
+      margin-left:auto;
       width: 60%;
-      max-width: auto;
       padding: 10px;
-      height: 40%;
+      height: 50%;
   }
   .label{
     text-align: left;
@@ -156,8 +155,8 @@ if (isset($_GET['options'])) {
 </head>
 <body>
 
-    <div class="container">
-    <form action="editcomment.php" method="get" onsubmit="return confirm('Update?');" align="center">
+    <div class="container" align="center">
+    <form action="editcomment.php" method="get" onsubmit="return confirm('Update?');">
     <h1 >Update Planning:</h1>
         <input type="hidden" name="name" name="name" value="<?php echo$name;?>"><br>
         <input type="hidden" id="email" name="email" value="<?php echo $email;?>"><br>
@@ -165,6 +164,7 @@ if (isset($_GET['options'])) {
         <input type="hidden" id="options" name="options" value="update"><br>
         <label for="comment">Comments/Questions</label><br>
         <textarea  cols="50" rows="6" id="comment"  name="comment"><?php echo $comment;?></textarea><br>
+        <br>
         <input type="submit" value="Update"><br>
     <p align="center"><a href="feedbackpage.php?email=<?php echo $email. '&name='.$name?>">Back</a></p>
     </form>
